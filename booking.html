@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdventureAwaits:Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="CSS/booking.css">
+ </head>
+ <body style="background-image:url('images/cswis.jpg');">
+    <header>
+        <img src="images/logo.jpeg" alt="logo" width="250px" height="80px"id="hlogo">
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="destination.html">DESTINATIONS</a>
+            <a href="packages.html">PACKAGES</a>
+            <a href="booking.html">BOOKING</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="test.html">TESTIMONIAL</a>
+        </nav>
+    </header>
+<main>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Filters</h3>
+        <label>Places:</label>
+        <select>
+            <option>Paris</option>
+            <option>Norway</option>
+            <option>Bali</option>
+            <option>Singapore</option>
+            <option>switzerland</option>
+            <option>Maldives</option>
+            <option>Sydney</option>
+            <option>Vietnam</option>
+        </select>
+
+        <label>Price Range:</label>
+        <input type="range" min="100" max="10000" value="500">
+
+        <label>Budget Type:</label>
+        <input type="checkbox"> Budget Hotels <br>
+        <input type="checkbox"> Premium Hotels <br>
+        <input type="checkbox"> Flights under ₹5000 <br>
+
+        <label>Select Date:</label>
+        <input type="date">
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h2 class="section-title">✈ Top Flight Deals</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/cparis.jpg" alt="Flight 1">
+                <div class="card-content">
+                    <h3>Banglore - Paris</h3>
+                    <p>Special flight offer between two iconic cities.</p>
+                    <span class="discount">20% OFF</span>
+                </div>
+            </div>
+               <div class="card">
+                <img src="images/malaysia.jpg" alt="Flight 2">
+                <div class="card-content">
+                    <h3>Delhi - Singapore</h3>
+                    <p>Fly with comfort and exclusive savings.</p>
+                    <span class="discount">15% OFF</span>
+                </div>
+            </div>
+               <div class="card">
+                <img src="images/maldeivs.jpg" alt="Flight 3">
+                <div class="card-content">
+                    <h3>Dubai - Maldives</h3>
+                    <p>Experience luxury at an affordable price.</p>
+                    <span class="discount">30% OFF</span>
+                </div>
+            </div>
+        </div>
+        <h2 class="section-title">🏨 Best Hotels & Resorts</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/hotel2.jpg" alt="Hotel 1">
+                <div class="card-content">
+                    <h3>Ocean View Resort</h3>
+                    <p>Relax with a sea breeze and luxury stay.</p>
+                    <span class="discount">25% OFF</span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/hotel1.jpg" alt="Hotel 2">
+                <div class="card-content">
+                    <h3>Mountain Retreat</h3>
+                    <p>Peaceful getaway surrounded by sunset.</p>
+                    <span class="discount">35% OFF</span>
+                </div>
+            </div>
+           <div class="card">
+                <img src="images/hotel3.jpg" alt="Hotel 3">
+                <div class="card-content">
+                    <h3>City Lights Hotel</h3>
+                    <p>Modern design with comfort and convenience.</p>
+                    <span class="discount">20% OFF</span>
+                </div>
+            </div>
+        </div>
+        <div class="book-form">
+            <h2>🧳 Book Your Trip</h2>
+            <form id="bookingForm">
+                <label>Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <label>Phone Number:</label>
+                <input type="text" id="phone Number" placeholder="Enter your phone Number" required>
+                <label>Date of Birth:</label>
+                <input type="text" id="name" placeholder="Enter your Date of Birth" required>
+                <label>Blood Group:</label>
+                <input type="text" id="name" placeholder="Enter your Blood Group" required>
+                <label>Address:</label>
+                <input type="text" id="name" placeholder="Enter your Address" required>
+                <label>Destination:</label>
+                <select id="destination" required>
+                    <option value="">-- Select Destination --</option>
+                    <option>Paris</option>
+                    <option>Norway</option>
+                    <option>Bali</option>
+                    <option>Singapore</option>
+                    <option>switzerland</option>
+                    <option>Maldives</option>
+                    <option>Sydney</option>
+                    <option>Vietnam</option>
+                </select>
+              <label>Travel Date:</label>
+              <input type="date" id="date" required>
+              <button type="submit">Book Ticket</button>
+              <div id="successMsg" class="success">✅ Ticket Booking Successfully Done!</div>
+            </form>
+        </div>
+    </div>
+</main>
+<footer>
+  <div class="footer-container">
+
+    <!-- Logo & Address -->
+    <div class="footer-section">
+      <img src="images/logo.jpeg" alt="Travel Explorer Logo" id="flogo">
+      <p><strong>AdventureAwaits Pvt. Ltd.</strong><br>
+         456 Wanderlust Avenue,<br>
+         Near City Center Mall,<br>
+         Bangalore, Karnataka - 560001,<br>
+         India
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:adventureawaits58@gmail.com">adventureawaits58@gmail.com</a></p>
+      <p>Phone: <a href="tel:+916361722066">+91 6361722066</a></p>
+
+      <p>Office Hours: Mon – Sat: 9 AM – 7 PM</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p class="tagline">© 2025 AdventureAwaits. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("successMsg").style.display = "block";
+    this.reset();
+    setTimeout(() => {
+        document.getElementById("successMsg").style.display = "none";
+    }, 4000);
+});
+</script>
+</body>
+ </html>

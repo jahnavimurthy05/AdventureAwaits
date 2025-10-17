@@ -1,0 +1,590 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ * body {
+     color: #fff;
+ }
+
+ /* Header */
+header{
+    display:flex;
+    flex-direction: row;
+    color:#EDBB7E;
+    background-color:#06454D;
+    justify-content:space-evenly;
+    align-items: center;
+    width:100%;
+    height:100px;
+    z-index:100;
+    background: linear-gradient(135deg, #06454D, #106360, #54432A, #AC8F75);
+
+}
+#hlogo{
+  border-radius: 50%;
+  height:100px;
+  width:100px;
+  margin:5px;
+}
+nav{
+  display:flex;
+  flex-direction: row;
+}
+nav a{
+    text-decoration: none;
+    color:#EDBB7E;
+    padding:10px;
+    text-align: center;
+    justify-content: center;
+    font-weight:500;
+    padding-left:30px;
+    flex-wrap: wrap;
+}
+a{
+  text-decoration: none;
+  color:#011517;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width:767px)
+{header{
+  height:700px;
+  padding:10px;
+  flex-direction: column;
+}
+  nav {
+      flex-direction:column;
+            }
+            #hlogo{
+              border-radius:50%;
+              height:200px;
+              width:200px;
+            }
+}
+@media (min-width:600px)and(max-width:991px)
+{
+            header{
+              height:300px;
+            }
+            #hlogo{
+              border-radius:50%;
+              height:100px;
+              width:100px;
+            }
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-videob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* keep video behind */
+}
+
+/* If you’re using <video> inside .bg-videob */
+.bg-videob video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  background: rgba(7, 42, 47, 0.8);
+  padding: 25px 50px;
+  border-radius: 10px;
+}
+
+
+.turn-btn {
+background: #06454D;
+border: 2px solid #ff9800; 
+padding: 10px 25px; 
+color: #fff; 
+border-radius: 30px;
+text-decoration: none; 
+display: inline-block;
+}
+
+/* Reviews Section */ 
+.reviews {
+background: linear-gradient(to right,#AC8F75,#06454D,#AC8F75); 
+padding: 80px 20px;
+text-align: center;
+color: #fff; 
+} 
+.reviews h2 { 
+font-size: 2em; 
+margin-bottom: 10px;
+color: #ffcc33;
+} 
+.review-subtext {
+font-size: 1em; 
+color: #d4d4d4; 
+margin-bottom: 40px; 
+} 
+.review-container {
+display: grid;
+grid-template-columns: auto auto auto;
+gap: 25px; 
+max-width: 1100px; 
+margin: 0 auto;
+}
+.review-card { 
+background: rgba(255, 255, 255, 0.1); 
+border-radius: 15px; 
+padding: 25px;
+text-align: left;
+box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
+} 
+.review-top {
+display: flex;
+align-items: center;
+margin-bottom: 15px; 
+} 
+.review-top img 
+{
+width: 60px; 
+height: 60px; 
+border-radius: 80%; 
+object-fit: cover;
+margin-right: 15px; 
+border: 2px solid #ffcc33;
+} 
+.review-top h4 { 
+font-size: 1.2em; 
+margin-bottom: 5px; 
+} 
+.stars 
+{ 
+color: #ffcc33;
+} 
+.review-card p
+{
+font-size: 0.95em; 
+line-height: 1.6;
+color: #AEBDCB; 
+}
+
+/* Book Section */
+.book-section { 
+text-align: center;
+padding: 30px 20px; 
+background: linear-gradient(to bottom, #085175, #2fba1d); 
+color: #fff;
+height: 40%;
+margin-top: -20px;
+}
+.book-section h2 { 
+font-size: 2.2em; 
+margin-bottom: 10px; 
+color: #ffcc33; 
+}
+.book-section p {
+font-size: 1.2em; 
+margin-bottom: 30px; 
+color: #eaeaea; 
+}
+.book { 
+position: relative; 
+width: 500px; 
+height: 350px; 
+margin: 40px auto; 
+box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 10px rgba(255,255,255,0.1); 
+border: 5px solid #4a2c21; 
+border-radius: 12px; 
+font-size: 10px; 
+}
+    
+.page {
+position: absolute; 
+width: 50%; 
+height: 100%; 
+background: #fdfcf7; 
+color: #333; 
+left: 0; 
+}    
+#page2, #page4 {
+left: 50%; 
+}
+.image-page img {
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
+border: 5px solid #fff; 
+box-sizing: border-box; 
+}
+.text-page {  
+background: #fff8e8; 
+}
+.page-content { 
+padding: 30px; 
+height: 100%; 
+text-align: left; 
+}
+.page-content h3 { 
+  color: #4a2c21; 
+  margin-bottom: 5px; 
+  font-size: 1.8em; 
+  font-weight: bold;
+}
+.page-content hr 
+{
+border: 0; 
+height: 2px; 
+background: #c39a6b; 
+margin: 15px 0 20px 0; 
+width: 60%; 
+}
+.page-content p 
+{ 
+font-size: 1.1em; 
+line-height: 1.8; 
+color: #444; 
+}
+.book-controls 
+{ 
+margin-top: 25px; 
+display: flex; 
+justify-content: center; 
+gap: 30px; 
+}
+
+    /* FAQ Section */
+.faq-section-search
+{ 
+display: flex; 
+justify-content: space-between; 
+align-items: flex-start; 
+background: linear-gradient(to right,#AC8F75,#06454D); 
+color: #090707; 
+padding: 80px 50px; 
+gap: 50px; 
+flex-wrap: wrap; 
+font-family: 'Poppins', sans-serif; 
+}
+.faq-left {
+flex: 1; 
+min-width: 150px; 
+}
+.faq-left h2
+{ 
+font-size: 2.2em; 
+color:#06454D; 
+margin-bottom: 15px; 
+}
+.faq-left p { 
+color: #eaeaea; 
+font-size: 1.1em; 
+}
+.faq-right { 
+flex: 2; 
+min-width: 300px; 
+display: flex; 
+flex-direction: column; 
+}
+#faq-search 
+{ 
+padding: 15px 20px; 
+border-radius: 8px; 
+border: none; 
+font-size: 1em; 
+margin-bottom: 20px; 
+}
+#faq-answer 
+{ 
+background: rgba(255,255,255,0.1); 
+padding: 15px; 
+border-radius: 12px; 
+min-height: 50px; 
+font-size: 1em; 
+color: #fff; 
+line-height: 1.6; 
+}
+#ask-more 
+{ 
+margin-top: 15px; 
+width: 150px; 
+padding: 10px 15px; 
+border: 2px solid #ff9800; 
+background: #06454D; 
+color: #fff; 
+border-radius: 30px; 
+cursor: pointer; 
+}
+#ask-more:hover
+{ 
+background: #ff9800; 
+color: #06454D; 
+}
+
+
+ /* Footer Styles */
+footer {
+  background: linear-gradient(135deg, #06454D, #106360, #54432A, #AC8F75);
+  color: #EDBB7E;
+  padding: 40px 20px;
+  font-size: 2;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #ffcc33;
+}
+
+.footer-section p, .footer-section a {
+  color:#EDBB7E;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-section a:hover {
+  color: #ffcc33;
+}
+
+#flogo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a i {
+  font-size: 40px;
+  color:#011517;
+}
+
+.social-icons a i:hover {
+  color: #ffcc33;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffcc33;
+  padding-top: 15px;
+}
+
+.tagline {
+  font-size: 1em;
+  color: #e7b204;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px){
+  footer{
+    flex-direction: column;
+    text-align: center;
+  }
+  footer i{
+    font-size: 30px;
+  margin-bottom:5px;
+}
+}
+ /* Responsive Footer */
+ @media screen and (max-width: 768px) {
+     footer {
+         flex-direction: column;
+         text-align: center;
+         align-items: center;
+         padding: 30px 20px;
+     }
+
+     .footer-left,
+     .footer-center,
+     .footer-right {
+         margin: 15px 0;
+     }
+
+     .socials {
+         justify-content: center;
+     }
+ }
+
+
+ @media screen and (max-width: 768px) {
+     .header {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+     }
+
+     nav {
+         flex-direction: column;
+         gap: 15px;
+         margin-top: 10px;
+     }
+
+     .review-container {
+         grid-template-columns: 1fr;
+     }
+
+     .faq-section-search {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .faq-left,
+     .faq-right {
+         width: 100%;
+         text-align: center;
+     }
+
+     .book {
+         width: 90%;
+         height: auto;
+     }
+
+     .address img {
+         width: 80px;
+         height: 80px;
+     }
+
+     footer {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+     }
+
+     /* Maintain book look on smaller screens */
+     @media screen and (max-width: 1024px) {
+         .book {
+             width: 80%;
+             height: 300px;
+             /* slightly smaller than desktop */
+         }
+
+         .page {
+             width: 50%;
+             height: 100%;
+         }
+
+         #page2,
+         #page4 {
+             left: 50%;
+         }
+     }
+
+     @media screen and (max-width: 768px) {
+         .book {
+             width: 100%;
+             height: 250px;
+             /* scale down height */
+         }
+
+         .page {
+             width: 50%;
+             /* keep side-by-side */
+             height: 100%;
+             left: auto;
+             /* reset any previous overrides */
+         }
+
+         #page1,
+         #page2,
+         #page3,
+         #page4 {
+             position: absolute;
+             /* ensure layering works */
+         }
+
+         .page img {
+             height: 100%;
+             object-fit: cover;
+         }
+
+         .page-content {
+             padding: 10px;
+         }
+
+         .book-controls {
+             margin-top: 15px;
+             gap: 15px;
+         }
+     }
+
+     @media screen and (max-width: 480px) {
+         .book {
+             width: 100%;
+             height: 200px;
+             /* smaller mobile book */
+         }
+
+         .page {
+             width: 50%;
+             /* still side-by-side */
+             height: 100%;
+         }
+
+         .page-content h3 {
+             font-size: 1em;
+         }
+
+         .page-content p {
+             font-size: 0.8em;
+         }
+
+         .book-controls label {
+             padding: 6px 12px;
+             font-size: 0.8em;
+         }
+     }
+
+ }
