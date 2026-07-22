@@ -155,18 +155,29 @@ a{
       bottom: 60px;
       left: 60px;
       z-index: 2;
-      color: #fff;
+      color: #ffffff !important;
       max-width: 500px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
     }
     .content .title {
       font-size: 36px;
       font-weight: 700;
       margin-bottom: 10px;
+      color: #ffffff !important;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     }
     .content .des {
       font-size: 15px;
       line-height: 1.5;
       margin: 15px 0;
+      color: #ffffff !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
+    .content .des strong {
+      color: #ffffff !important;
     }
     .buttons button {
       background: #ff9800;
