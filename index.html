@@ -29,7 +29,8 @@
         <div class="content">
           <div class="title">PARIS</div>
           <div class="des">Paris is the capital and largest city of France, often called the "City of Light" for its historical significance and beauty.
-             Located on the River Seine, Paris is renowned for landmarks like the Eiffel Tower, world-class museums, and vibrant culture. </div>
+             Located on the River Seine, Paris is renowned for landmarks like the Eiffel Tower, world-class museums, and vibrant culture.
+             <br><strong id="paris-temp">Loading live weather...</strong></div>
           <div class="buttons">
             <button><a href="packages.html" alt="goto pacakges">SEE MORE</a></button>
             <button><a href="booking.html" alt="goto book">BOOK NOW</a></button>
@@ -42,7 +43,8 @@
         <div class="content">
           <div class="title">NORWAY</div>
           <div class="des">Norway is a Nordic country located on the Scandinavian Peninsula in Northern Europe, known for its dramatic fjords, mountainous terrain, 
-            and extensive coastline. The capital is Oslo.</div>
+            and extensive coastline. The capital is Oslo.
+            <br><strong id="norway-temp">Loading live weather...</strong></div>
           <div class="buttons">
            <button><a href="packages.html" alt="goto pacakges">SEE MORE</a></button>
             <button><a href="booking.html" alt="goto book">BOOK NOW</a></button>
@@ -55,7 +57,8 @@
         <div class="content">
           <div class="title">BALI</div>
           <div class="des">Bali is an island province of Indonesia, famous for its beautiful beaches, lush landscapes, and vibrant cultural traditions. It is the only Hindu-majority
-             region in Indonesia and attracts millions of tourists with its arts, temples, and hospitality.</div>
+             region in Indonesia and attracts millions of tourists with its arts, temples, and hospitality.
+             <br><strong id="bali-temp">Loading live weather...</strong></div>
           <div class="buttons">
             <button><a href="packages.html" alt="goto pacakges">SEE MORE</a></button>
             <button><a href="booking.html" alt="goto book">BOOK NOW</a></button>
@@ -267,6 +270,25 @@
       interval = setInterval(nextSlide, 5000);
     }
     resetTimer();
+  </script>
+  <script>
+    // Asynchronous REST API call to fetch live weather data
+    async function fetchLiveWeather(lat, lon, elementId, cityName) {
+        try {
+            const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
+            const data = await response.json();
+            const temp = data.current_weather.temperature;
+            document.getElementById(elementId).innerText = `🌡️ Live Weather in ${cityName}: ${temp}°C`;
+        } catch (error) {
+            console.error("Failed to fetch weather data:", error);
+        }
+    }
+    // Fetch live temperatures on page load
+    window.addEventListener("DOMContentLoaded", () => {
+        fetchLiveWeather(48.8566, 2.3522, 'paris-temp', 'Paris');     // Paris, France
+        fetchLiveWeather(59.9139, 10.7522, 'norway-temp', 'Oslo');    // Norway
+        fetchLiveWeather(-8.4095, 115.1889, 'bali-temp', 'Bali');     // Bali
+    });
   </script>
 </body>
 </html>
