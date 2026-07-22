@@ -150,6 +150,14 @@ a{
       object-fit: cover;
       filter: brightness(0.8);
     }
+    .carousel .content,
+    .carousel .content .title,
+    .carousel .content .des,
+    .carousel .content .des strong,
+    .carousel .content * {
+      color: #ffffff !important;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95) !important;
+    }
     .content {
       position: absolute;
       bottom: 60px;
@@ -157,7 +165,7 @@ a{
       z-index: 2;
       color: #ffffff !important;
       max-width: 500px;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
       padding: 20px;
       border-radius: 12px;
       backdrop-filter: blur(4px);
